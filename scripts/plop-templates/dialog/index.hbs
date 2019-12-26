@@ -1,0 +1,33 @@
+<template>
+    <BaseDialog
+        v-bind="$attrs"
+        v-on="$listeners"
+        toastTransition="fade"
+        :maskClose="true"
+        class="dialog-{{ kebabCase name }}">
+        <div class="{{ kebabCase name }}-content">
+
+        </div>
+    </BaseDialog>
+</template>
+
+<script>
+import BaseDialog from "../BaseDialog.vue";
+export default {
+    name: '{{ kebabCase name }}',
+    meta: {
+        cn: '{{ cn }}'
+    },
+    components: {
+        BaseDialog
+    },
+};
+</script>
+
+<style lang="less">
+.dialog-{{ kebabCase name }} {
+    .{{ kebabCase name }}-content {
+        
+    }
+}
+</style>
